@@ -1,0 +1,55 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'br.com.fiapaoj'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+jar {
+	baseName = 'microservices'
+	version = '0.0.1'
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+	compile project(':metrics')
+	compile project(':users')
+	compile project(':dashboard')
+	compile project(':eureka-server')
+	compile project(':zuul-api-gateway')
+	compile project(':config-server')
+}
+
+subprojects {    
+
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+	}
+
+    ext {
+		springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
+	}	
+}

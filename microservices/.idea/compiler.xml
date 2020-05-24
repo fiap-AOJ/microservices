@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="microservices.config-server.main" target="1.8" />
+      <module name="microservices.config-server.test" target="1.8" />
+      <module name="microservices.dashboard.main" target="1.8" />
+      <module name="microservices.dashboard.test" target="1.8" />
+      <module name="microservices.eureka-server.main" target="1.8" />
+      <module name="microservices.eureka-server.test" target="1.8" />
+      <module name="microservices.main" target="1.8" />
+      <module name="microservices.metrics.main" target="1.8" />
+      <module name="microservices.metrics.test" target="1.8" />
+      <module name="microservices.test" target="1.8" />
+      <module name="microservices.users.main" target="1.8" />
+      <module name="microservices.users.test" target="1.8" />
+      <module name="microservices.zuul-api-gateway.main" target="1.8" />
+      <module name="microservices.zuul-api-gateway.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

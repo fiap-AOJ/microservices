@@ -1,0 +1,7 @@
+include ':users'
+include ':metrics'
+include ':dashboard'
+include ':eureka-server'
+include ':zuul-api-gateway'
+include ':config-server'
+rootProject.name = 'microservices'
